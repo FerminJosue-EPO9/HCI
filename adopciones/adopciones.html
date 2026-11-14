@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="documento" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Patitas Suaves Xalapa</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link href="../shared/estilos-compartidos.css" rel="stylesheet">
+  <link href="../shared/recolor-compartido.css" rel="stylesheet">
+  <link href="adopciones.css" rel="stylesheet">
+</head>
+
+<body class="pagina">
+  <header
+    class="encabezado">
+    <div class="encabezado__contenedor">
+      <div class="encabezado__fila"><img alt="logo.jpg" class="encabezado__imagen"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDwRCJ5YoN6wPzdklgDDPKD_OmplXWdht9Y7GF-OPRimOS8JE3QQbOrU41xIdLW0uWVp-SsACB587mqmCzapX9W3jYM-n4-VVYic5wr1W3wo05N_gR1qExWKGQcl8JsbSGBxCsdigsM0e5K4qgYrf3zO1Nh4jnajjF0VwudAGbv9rbZIq3p6y_oSe8WetTunA4FKvc2hE3yJ7K2ppBvg6BYkfGemnUJLmWDw7HARTY1uu6MOWkASOFdA"><a
+          class="encabezado__enlace-2"
+          data-path="inicio" href="../index.html">Patitas Suaves <span class="encabezado__resalte">Xalapa</span></a>
+      </div>
+      <nav class="encabezado__navegacion"><a
+          class="encabezado__enlace"
+          data-path="inicio" href="../index.html">Inicio</a><a aria-current="page"
+          class="encabezado__boton-activo"
+          data-path="adopciones" href="../adopciones/adopciones.html">Adopciones</a><a
+          class="encabezado__enlace"
+          data-path="como-ayudar" href="../como-ayudar/como-ayudar.html">Cómo ayudar</a><a
+          class="encabezado__enlace"
+          data-path="nosotros" href="../nosotros/nosotros.html">Nosotros</a><a
+          class="encabezado__enlace"
+          data-path="comunidad" href="../comunidad/comunidad.html">Comunidad</a><a
+          class="encabezado__enlace"
+          data-path="contacto" href="../contacto/contacto.html">Contacto</a></nav>
+      <div class="encabezado__fila-2"><a
+          class="encabezado__boton"
+          data-path="donar-ahora" href="../como-ayudar/como-ayudar.html#donaciones-economicas">Donar Ahora / Apoyar</a>
+        <div class="encabezado__insignia-icono"><span
+            class="material-symbols-outlined encabezado__icono">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="principal">
+    <div class="principal__columna">
+      <!-- Interactive Adoption App State Controller -->
+      <section class="catalogo-adopcion">
+        <div class="catalogo-adopcion__capa-2">
+        </div>
+        <div
+          class="catalogo-adopcion__capa-3">
+        </div>
+        <div class="catalogo-adopcion__contenedor">
+          <!-- Title & Value Prop -->
+          <div class="catalogo-adopcion__bloque-2">
+            <div
+              class="catalogo-adopcion__tarjeta-2">
+              <span class="catalogo-adopcion__etiqueta-2"></span>PROGRAMA CLÍNICO DE ADOPCIONES EN XALAPA</div>
+            <h1 class="catalogo-adopcion__titulo">¿Nos
+              echas una patita?<br><span class="catalogo-adopcion__resalte-2">Ayúdales a encontrar hogar</span></h1>
+            <p class="catalogo-adopcion__texto-2">Todos nuestros
+              peludos han sido rescatados, rehabilitados médica y emocionalmente, vacunados y esterilizados. Cada uno
+              cuenta con expediente clínico verificado listo para integrarse a una familia responsable.</p>
+          </div>
+          <!-- Live Filter Suite -->
+          <div class="catalogo-adopcion__tarjeta-4">
+            <div
+              class="catalogo-adopcion__tarjeta-5">
+              <div class="catalogo-adopcion__fila-2">
+                <span class="material-symbols-outlined catalogo-adopcion__icono-2">filter_alt</span>
+                <span class="catalogo-adopcion__resalte-7">Filtros de Búsqueda Inteligente</span>
+              </div>
+              <button
+                class="catalogo-adopcion__boton-2"
+                id="reset-filters-btn">
+                <span class="material-symbols-outlined catalogo-adopcion__icono-3">restart_alt</span>
+                Restablecer
+              </button>
+            </div>
+            <div class="catalogo-adopcion__cuadricula-2">
+              <!-- Especie -->
+              <div class="catalogo-adopcion__columna-2">
+                <label class="catalogo-adopcion__etiqueta-campo">Especie</label>
+                <div class="catalogo-adopcion__fila-3" id="species-filter">
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro-todos active"
+                    data-filter="species" data-val="all">Todos</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="species" data-val="perro">Perros</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="species" data-val="gato">Gatos</button>
+                </div>
+              </div>
+              <!-- Tamaño -->
+              <div class="catalogo-adopcion__columna-2">
+                <label class="catalogo-adopcion__etiqueta-campo">Tamaño</label>
+                <div class="catalogo-adopcion__fila-3" id="size-filter">
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro-todos active"
+                    data-filter="size" data-val="all">Todos</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="size" data-val="chico">Chico</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="size" data-val="mediano">Mediano</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="size" data-val="grande">Grande</button>
+                </div>
+              </div>
+              <!-- Edad -->
+              <div class="catalogo-adopcion__columna-2">
+                <label class="catalogo-adopcion__etiqueta-campo">Etapa de Vida</label>
+                <div class="catalogo-adopcion__fila-3" id="age-filter">
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro-todos active"
+                    data-filter="age" data-val="all">Todas</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="age" data-val="cachorro">Cachorro</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="age" data-val="adulto">Adulto</button>
+                  <button
+                    class="filter-btn catalogo-adopcion__filtro"
+                    data-filter="age" data-val="senior">Golden Paws</button>
+                </div>
+              </div>
+              <!-- Compatibilidad -->
+              <div class="catalogo-adopcion__columna-2">
+              </div>
+            </div>
+            <div class="catalogo-adopcion__fila-4">
+              <span id="pet-count-indicator">Mostrando 6 peludos listos para adopción</span>
+              <span class="catalogo-adopcion__resalte-8">
+                <span class="material-symbols-outlined catalogo-adopcion__icono-4">verified</span> Criterio Médico Estricto
+              </span>
+            </div>
+          </div>
+          <!-- Pets Grid -->
+          <div class="catalogo-adopcion__cuadricula-3" id="pets-catalog"><!-- Ficha 1: Rocky -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="adulto" data-compat="perros,ninos" data-size="mediano" data-species="perro">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Rocky"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG-XChpMPeod2nJgEBSx0LI8cuw9FFDfNzN9zzeIQMAZq_EEZJSq-L5bDN9rfLpTkzBFTwZ0nMmCmRoLneG72dfAAKWhPSDDp5j3-WDU0zALlPG4nUozbn-7ZjRrOT6gcTCUwtIVKajVT7UWX0UT0s6ov_u21wja21tLXbGjIoL_xtXodKlDQb3LVKMH7QbzIPCGR4w0a7LJQhN9YIIAz7L4YaIr7HZTVgQc-ersLC49IJua6Z7Oq2Tg">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Perro · 1 año
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Rocky</h3>
+                  <span class="catalogo-adopcion__resalte-9">Macho · 18 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Rescatado de atropellamiento en Av. Lázaro Cárdenas. Pasó por cirugía de cadera y...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Rocky', 'Perro mestizo, 1 año', 'Macho')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ficha 2: Mía -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="cachorro" data-compat="gatos" data-size="chico" data-species="gato">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Mía"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxWq5lYRaib1iW4IoTC7fFcpX7KoEob6DBJlDuR-cI8OgPZFxmlsY2uhPb6ScGVr7E2K30SlW52MMaF74aGuC5XTcsnHimN7Wr8H90rnJ6KJmtv83vEvKRXOwxdd_Uyrj65n3UkB-NMlbXJtL_xmBkZAH4SgUHcPNnAQXcKx9WTAlYwnZEwM-xK11Gbq2XCWOvoDgGIoiO8GUbDdvJ297RnWxjhGj3jgw26FOtDq1NygXeg4uMkuToIA">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Gata · 8 meses
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Mía</h3>
+                  <span class="catalogo-adopcion__resalte-9">Hembra · 3.2 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Hermosa gata carey con patrón tricolor único. Tímida durante los primeros 10...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Mía', 'Gata carey, 8 meses', 'Hembra')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ficha 3: Boby -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="senior" data-compat="ninos,perros,gatos" data-size="chico" data-species="perro">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Boby"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRPRfGPriYj2QE1Bhi7PTxijJYxOICPJ7xYLDG7JwXgnKquuX-YPVoRz3M5awEk0Am_FJr38WvVdJH1KSJuGramPgJ5gdEOa6Xk8MfeG81Qrx7EoyMtWYnyhRnbecg7FExRovRa5aCU7TpLOiZBaN_c3Zg_VTJnSxEmne4kLEzPl-brZzC8lztDoF4RyVxSwwdKyhCuEiiJa-LYf-zNXmArZnE_uaAEIZEDoVtab7v2rLfkMG7upLPwg">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Perro · 8 años
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Boby</h3>
+                  <span class="catalogo-adopcion__resalte-9">Macho · 9 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Un caballero de la tercera edad. No destruye muebles, sabe pasear con correa sin jalar y...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Boby', 'Senior mestizo, 8 años', 'Macho')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ficha 4: Chispa -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="cachorro" data-compat="ninos,perros" data-size="mediano" data-species="perro">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Chispa"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkzYTjSUQ2ViPP5TnKxC1748BmOOVYFbSihVdvzVPvnnuO_wjSOW-xi3dBe9fysH_ujiIM7mPxLfE8Z0PtGJw4PoBWiKbsEJkJoN4GtTi0U9qmvla8oMyVM2x2uHv-L0OyE1zuIJRGJEkWuLJ3z8Xa0gTIuUurn1ltalQ5vZufGrmMbAQw08zUEMmmo5DQpZ8FO_6-7CbZnsti1a0Q0Xbny4R04i1DBCIzySEBGfSHL9MzFEXIQ7pNg">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Cachorra · 4 meses
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Chispa</h3>
+                  <span class="catalogo-adopcion__resalte-9">Hembra · 6 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Llegó a nosotros en estado de inanición severo. Hoy es un torbellino de alegría,...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Chispa', 'Cachorra mestiza, 4 meses', 'Hembra')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ficha 5: Duque -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="adulto" data-compat="ninos,perros" data-size="grande" data-species="perro">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Duque"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkzYTjSUQ2ViPP5TnKxC1748BmOOVYFbSihVdvzVPvnnuO_wjSOW-xi3dBe9fysH_ujiIM7mPxLfE8Z0PtGJw4PoBWiKbsEJkJoN4GtTi0U9qmvla8oMyVM2x2uHv-L0OyE1zuIJRGJEkWuLJ3z8Xa0gTIuUurn1ltalQ5vZufGrmMbAQw08zUEMmmo5DQpZ8FO_6-7CbZnsti1a0Q0Xbny4R04i1DBCIzySEBGfSHL9MzFEXIQ7pNg">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Perro · 2 años
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Duque</h3>
+                  <span class="catalogo-adopcion__resalte-9">Macho · 26 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Cruza de labrador noble, inteligente y equilibrado. Camina al lado sin tirar de la...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Duque', 'Cruza Labrador, 2 años', 'Macho')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Ficha 6: Pelusa -->
+            <article
+              class="pet-card catalogo-adopcion__tarjeta"
+              data-age="adulto" data-compat="gatos" data-size="chico" data-species="gato">
+              <div class="catalogo-adopcion__bloque">
+                <img class="catalogo-adopcion__imagen" alt="Pelusa"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA1UzXuHc6OvyEtUVX_NrJcXoyHIXyfBKMML_1gwuwj5GeSH7EMv9jD0SeSvAGnD0-jn144rYziWVjQPAvouwPibXvMd6L-uA6F1IxvFgzoA-9a0_YcnR2dbOc_4DesZ90J519rRCVhhHo7G4uGyeoYwYFj3M76uVkgn7z9NljCSS4YjkMRoEogH7M51gmKBdEYagAAQApdHjPRUSN80B9Fvz1g7LPsgMPxuQIQgeot1SLFBTMRgWyhw">
+                <div class="catalogo-adopcion__capa">
+                  <span
+                    class="catalogo-adopcion__etiqueta-3">
+                    Gato · 1.5 años
+                  </span>
+                </div>
+              </div>
+              <div class="catalogo-adopcion__columna">
+                <div class="catalogo-adopcion__fila">
+                  <h3 class="catalogo-adopcion__subtitulo">Pelusa</h3>
+                  <span class="catalogo-adopcion__resalte-9">Macho · 4.1 kg</span>
+                </div>
+                <p class="catalogo-adopcion__texto">
+                  Gato blanco de pelaje sedoso y ojos bicolores. Es tranquilo, educado en el arenero...
+                </p>
+                <div class="catalogo-adopcion__columna-3">
+                  <div class="catalogo-adopcion__fila-6">
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Esterilizado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Desparasitado</span>
+                    <span class="catalogo-adopcion__resalte"><span
+                        class="material-symbols-outlined catalogo-adopcion__icono">check_circle</span>
+                      Rehabilitado</span>
+                  </div>
+                  <button
+                    class="catalogo-adopcion__boton-4"
+                    onclick="openAdoptionModal('Pelusa', 'Gato blanco, 1.5 años', 'Macho')">
+                    Solicitar Adopción
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Adopta por un Día (Emotional Foster Experience) -->
+      <section class="programa-adopta-por-un-dia">
+        <div class="programa-adopta-por-un-dia__contenedor">
+          <div class="programa-adopta-por-un-dia__tarjeta">
+            <div class="programa-adopta-por-un-dia__cuadricula">
+              <!-- Imagen -->
+              <div class="programa-adopta-por-un-dia__columna-imagen">
+                <div class="programa-adopta-por-un-dia__marco">
+                  <img alt="Adopta No Compres" class="programa-adopta-por-un-dia__imagen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2hxY0ZWzMgicPVUrkFQTeO1oAi6yP34lBQE1sIM1ENMOHP8u0s8jekBejprdrrq1j8_iHGcZxS-Cw6dcJ-lEW3uVRGyUoNFmaBIN1RX74XbBQanpRAdBb6pZbno9KoI7ddi9azVsobJI8uQq1X10DMRyNvakqQ6A0w2KfAcxV-1b9ss3lqY1kK3-YqWZNjEPyC5XN-8pvlUzIhoNKJprMolSed_c03YE9OLpCgX7r8vleLCIVABoiug">
+                </div>
+              </div>
+              <!-- Texto -->
+              <div class="programa-adopta-por-un-dia__columna">
+                <div class="programa-adopta-por-un-dia__insignia">
+                  <span class="material-symbols-outlined programa-adopta-por-un-dia__insignia-icono">volunteer_activism</span>
+                  <span class="programa-adopta-por-un-dia__insignia-texto">Programas de apoyo</span>
+                </div>
+                <h2 class="programa-adopta-por-un-dia__titulo">
+                  Programa <span class="programa-adopta-por-un-dia__resalte">“Adopta por un Día”</span>
+                </h2>
+                <p class="programa-adopta-por-un-dia__texto">
+                  ¿No puedes comprometerte a una adopción permanente ahora pero quieres cambiar su mundo? Esta iniciativa
+                  está diseñada para nuestros perritos mayores o con estancias prolongadas en refugio. Llévalos a
+                  disfrutar de un paseo estimulante por el <strong>Paseo de Los Lagos</strong> o el <strong>Parque
+                    Juárez</strong> de Xalapa.
+                </p>
+                <div class="programa-adopta-por-un-dia__mosaicos">
+                  <div class="programa-adopta-por-un-dia__mosaico">
+                    <span class="material-symbols-outlined programa-adopta-por-un-dia__mosaico-icono">visibility</span>
+                    <div>
+                      <h4 class="programa-adopta-por-un-dia__mosaico-titulo">Mayor Visibilidad</h4>
+                      <p class="programa-adopta-por-un-dia__mosaico-texto">Portan chalecos que no solo los ayuda a
+                        pasearlos sino también a encontrarles un hogar</p>
+                    </div>
+                  </div>
+                  <div class="programa-adopta-por-un-dia__mosaico">
+                    <span class="material-symbols-outlined programa-adopta-por-un-dia__mosaico-icono">nature_people</span>
+                    <div>
+                      <h4 class="programa-adopta-por-un-dia__mosaico-titulo">Estimulación Sensorial</h4>
+                      <p class="programa-adopta-por-un-dia__mosaico-texto">Reduce el estrés del refugio y eleva su estado
+                        de ánimo.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="programa-adopta-por-un-dia__acciones">
+                  <a class="programa-adopta-por-un-dia__boton"
+                    href="https://wa.me/522281268827?text=Hola,%20quiero%20registrarme%20al%20programa%20Adopta%20por%20un%20D%C3%ADa%20en%20Xalapa"
+                    rel="noopener noreferrer" target="_blank">
+                    <span class="material-symbols-outlined programa-adopta-por-un-dia__boton-icono">chat</span>
+                    <span>Registrarme vía WhatsApp</span>
+                  </a>
+                  <span class="programa-adopta-por-un-dia__nota">
+                    Incluye arnés, pechera, correa de seguridad y premios.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Protocolo de Adopción Responsable (Inspirado en AdoptaMX) -->
+      <section class="proceso-adopcion">
+        <div class="proceso-adopcion__contenedor">
+          <div class="proceso-adopcion__contenedor-2"><span
+              class="proceso-adopcion__resalte">¿QUÉ NECESITO PARA
+              PODER ADOPTAR?</span>
+            <h2 class="proceso-adopcion__titulo">Proceso de Adopción
+              Responsable en 4 Pasos</h2>
+            <p class="proceso-adopcion__texto-2">Garantizamos una transición
+              armónica basada en el bienestar animal y la seguridad de tu entorno familiar.</p>
+          </div>
+          <div class="proceso-adopcion__cuadricula">
+            <!-- Step 1 -->
+            <div class="proceso-adopcion__tarjeta">
+              <div
+                class="proceso-adopcion__insignia-icono">
+                01
+              </div>
+              <h3 class="proceso-adopcion__subtitulo">Solicitud Previa</h3>
+              <p class="proceso-adopcion__texto">
+                Elige al candidato según su energía y completa el cuestionario de compatibilidad de espacio, rutina y
+                dinámica familiar.
+              </p>
+              <div class="proceso-adopcion__fila">
+                <span class="material-symbols-outlined proceso-adopcion__icono">assignment</span> Formulario en línea
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="proceso-adopcion__tarjeta">
+              <div
+                class="proceso-adopcion__insignia-icono">
+                02
+              </div>
+              <h3 class="proceso-adopcion__subtitulo">Entrevista &amp; Filtro</h3>
+              <p class="proceso-adopcion__texto">
+                Videollamada o visita al domicilio para verificar ventanas seguras (en gatos), bardas adecuadas y
+                acuerdo unánime de los habitantes.
+              </p>
+              <div class="proceso-adopcion__fila">
+                <span class="material-symbols-outlined proceso-adopcion__icono">home</span> Verificación de entorno
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="proceso-adopcion__tarjeta">
+              <div
+                class="proceso-adopcion__insignia-icono">
+                03
+              </div>
+              <h3 class="proceso-adopcion__subtitulo">Convivencia Guiada</h3>
+              <p class="proceso-adopcion__texto">
+                Sesión presencial en Loma Bonita o área neutral para comprobar química con niños u otras mascotas del
+                hogar.
+              </p>
+              <div class="proceso-adopcion__fila">
+                <span class="material-symbols-outlined proceso-adopcion__icono">handshake</span> Cita programada
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="proceso-adopcion__tarjeta">
+              <div
+                class="proceso-adopcion__insignia-icono-2">
+                04
+              </div>
+              <h3 class="proceso-adopcion__subtitulo">Convenio y Entrega</h3>
+              <p class="proceso-adopcion__texto">
+                Firma del contrato legal de no maltrato ni abandono, entrega de carnet de vacunación y kit de bienvenida
+                con alimento inicial.
+              </p>
+              <div class="proceso-adopcion__fila-2">
+                <span class="material-symbols-outlined proceso-adopcion__icono">celebration</span> Bienvenida oficial
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA / Alternative Support -->
+      <section class="apadrinamiento">
+        <div class="apadrinamiento__contenedor">
+          <div class="apadrinamiento__tarjeta">
+            <div class="apadrinamiento__fila">
+              <div class="apadrinamiento__insignia-icono">
+                <span class="material-symbols-outlined apadrinamiento__icono">savings</span>
+              </div>
+              <div>
+                <h2 class="apadrinamiento__titulo">¿No cuentas con espacio para adoptar en este momento?</h2>
+                <p class="apadrinamiento__texto">Descubre como puedes apoyarnos a través de donaciones, ya sea monetarias o
+                  en especie; así, aseguras alimento de calidad, vacunas preventivas y tratamientos clínicos para quienes
+                  aún esperan un hogar definitivo.</p>
+              </div>
+            </div>
+            <a class="apadrinamiento__boton" data-path="como-ayudar" href="../como-ayudar/como-ayudar.html">Cómo ayudar</a>
+          </div>
+        </div>
+      </section>
+      <!-- Adoption Application Modal Dialog -->
+      <!-- Sticky / Bottom Floating Contact Strip -->
+      <div class="barra-contacto">
+        <div class="barra-contacto__fila">
+          <div class="barra-contacto__insignia-icono">
+            <span class="material-symbols-outlined barra-contacto__icono">contact_support</span>
+          </div>
+          <div class="barra-contacto__bloque">
+            <p class="barra-contacto__titulo">¿Tienes dudas o deseas apadrinar?</p>
+            <p class="barra-contacto__texto">WhatsApp directo: 228 126 8827 · Atención con cita en Loma Bonita</p>
+          </div>
+        </div>
+        <div class="barra-contacto__acciones">
+          <a class="barra-contacto__boton-whatsapp" href="https://wa.me/522281268827" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined barra-contacto__icono-whatsapp">chat</span>
+            <span>WhatsApp</span>
+          </a>
+          <a class="barra-contacto__boton-donar" data-path="donar-ahora" href="../como-ayudar/como-ayudar.html#donaciones-economicas">
+            <span class="material-symbols-outlined barra-contacto__icono-donar">content_paste</span>
+            <span>Donar</span>
+          </a>
+        </div>
+      </div>
+      <dialog
+        class="dialogo-adopcion"
+        id="adoptionModal">
+        <div class="dialogo-adopcion__fila">
+          <div class="dialogo-adopcion__fila-2">
+            <div class="dialogo-adopcion__insignia-icono">
+              <span class="material-symbols-outlined dialogo-adopcion__icono">pets</span>
+            </div>
+            <div>
+              <h4 class="dialogo-adopcion__subtitulo" id="modalPetName">Solicitud de
+                Adopción</h4>
+              <p class="dialogo-adopcion__texto" id="modalPetDetails">Completa tus datos de contacto
+              </p>
+            </div>
+          </div>
+          <button
+            class="dialogo-adopcion__boton"
+            onclick="closeAdoptionModal()">
+            <span class="material-symbols-outlined dialogo-adopcion__icono-2">close</span>
+          </button>
+        </div>
+        <form class="dialogo-adopcion__formulario" id="adoptionForm" onsubmit="handleAdoptionSubmit(event)">
+          <div>
+            <label class="dialogo-adopcion__etiqueta-campo">Nombre completo *</label>
+            <input
+              class="dialogo-adopcion__campo"
+              placeholder="Ej. Mariana Solís Gómez" required="" type="text">
+          </div>
+          <div class="dialogo-adopcion__cuadricula">
+            <div>
+              <label class="dialogo-adopcion__etiqueta-campo">WhatsApp / Teléfono *</label>
+              <input
+                class="dialogo-adopcion__campo"
+                placeholder="228 123 4567" required="" type="tel">
+            </div>
+            <div>
+              <label class="dialogo-adopcion__etiqueta-campo">Colonia / Zona de Xalapa *</label>
+              <input
+                class="dialogo-adopcion__campo"
+                placeholder="Ej. Las Ánimas, Coatepec..." required="" type="text">
+            </div>
+          </div>
+          <div>
+            <label class="dialogo-adopcion__etiqueta-campo">¿Tienes otras mascotas
+              actualmente?</label>
+            <select
+              class="dialogo-adopcion__selector">
+              <option value="no">No, sería mi única mascota</option>
+              <option value="perros">Sí, perro(s)</option>
+              <option value="gatos">Sí, gato(s)</option>
+              <option value="ambos">Sí, perros y gatos</option>
+            </select>
+          </div>
+          <div>
+            <label class="dialogo-adopcion__etiqueta-campo">¿Por qué deseas adoptar a este
+              peludo?</label>
+            <textarea
+              class="dialogo-adopcion__campo-texto"
+              placeholder="Cuéntanos brevemente sobre tu rutina y espacio de vivienda..." rows="3"></textarea>
+          </div>
+          <div class="dialogo-adopcion__tarjeta">
+            <span class="material-symbols-outlined dialogo-adopcion__icono-3">info</span>
+            <p class="dialogo-adopcion__texto-2">
+              Al enviar esta solicitud, nuestro equipo de trabajo social voluntario te contactará en menos de 24 horas
+              hábiles para coordinar la entrevista.
+            </p>
+          </div>
+          <div class="dialogo-adopcion__fila-3">
+            <button
+              class="dialogo-adopcion__boton-2"
+              onclick="closeAdoptionModal()" type="button">
+              Cancelar
+            </button>
+            <button
+              class="dialogo-adopcion__boton-3"
+              type="submit">
+              Enviar Solicitud
+            </button>
+          </div>
+        </form>
+      </dialog>
+      <!-- Client-side Interactive Filter & Modal Logic -->
+      <script src="adopciones.js"></script>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="pie__contenedor">
+      <div class="pie__cuadricula">
+        <div class="pie__columna">
+          <div class="pie__fila-2"><img alt="logo.jpg" class="pie__imagen"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDwRCJ5YoN6wPzdklgDDPKD_OmplXWdht9Y7GF-OPRimOS8JE3QQbOrU41xIdLW0uWVp-SsACB587mqmCzapX9W3jYM-n4-VVYic5wr1W3wo05N_gR1qExWKGQcl8JsbSGBxCsdigsM0e5K4qgYrf3zO1Nh4jnajjF0VwudAGbv9rbZIq3p6y_oSe8WetTunA4FKvc2hE3yJ7K2ppBvg6BYkfGemnUJLmWDw7HARTY1uu6MOWkASOFdA"><span
+              class="pie__resalte-2">Patitas Suaves</span>
+          </div>
+          <p class="pie__texto">“Buscando hacer un cambio en la
+            sociedad”</p>
+          <p class="pie__texto-2">Organización sin fines de lucro
+            dedicada al rescate médico digno, rehabilitación integral y adopción amorosa en Xalapa, Veracruz.</p>
+        </div>
+        <div class="pie__columna-2">
+          <h3 class="pie__subtitulo">Enlaces Rápidos</h3>
+          <nav class="pie__navegacion"><a
+              class="pie__enlace"
+              data-path="inicio" href="../index.html">Inicio</a><a aria-current="page"
+              class="pie__enlace-activo-2" data-path="adopciones" href="../adopciones/adopciones.html">Adopciones</a><a
+              class="pie__enlace"
+              data-path="como-ayudar" href="../como-ayudar/como-ayudar.html">Cómo ayudar</a><a
+              class="pie__enlace"
+              data-path="nosotros" href="../nosotros/nosotros.html">Nosotros</a><a
+              class="pie__enlace"
+              data-path="comunidad" href="../comunidad/comunidad.html">Comunidad</a><a
+              class="pie__enlace"
+              data-path="contacto" href="../contacto/contacto.html">Contacto</a></nav>
+        </div>
+        <div class="pie__columna-2">
+          <h3 class="pie__subtitulo">Contacto y Visitas</h3>
+          <div class="pie__columna-3">
+            <div class="pie__fila"><span
+                class="material-symbols-outlined pie__icono">chat</span><span>WhatsApp: <strong class="pie__negrita">228 126 8827</strong></span></div>
+            <div class="pie__fila"><span
+                class="material-symbols-outlined pie__icono">location_on</span><span>Colonia Loma Bonita, Xalapa, Veracruz.</span></div>
+          </div>
+        </div>
+        <div class="pie__columna">
+          <h3 class="pie__subtitulo">Comunidad Digital</h3>
+          <div class="pie__columna-4"><span>Facebook:
+              <strong class="pie__negrita">Rescate Animal Patitas Suaves</strong></span><span>Instagram:
+              <strong class="pie__negrita">@patitassuavesxalapa</strong></span><span>Correo: <strong
+                class="pie__negrita">patitassuavesxalapa@gmail.com</strong></span></div>
+          <div class="pie__columna-5">
+            <p class="pie__texto-4">Proyecto Universitario</p>
+            <p class="pie__texto-5">Diseño UI/UX — <strong>Universidad del
+                Istmo</strong></p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pie__columna-6">
+        <p>© 2026 Patitas Suaves Xalapa. Todos los derechos reservados.</p>
+        <div class="pie__fila-3"><a class="pie__enlace-2"
+            data-path="privacidad" href="#">Políticas de privacidad</a><a class="pie__enlace-2"
+            data-path="terminos" href="#">Términos de uso</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

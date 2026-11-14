@@ -1,0 +1,1055 @@
+/* ==========================================================
+   comunidad — estilos exclusivos de esta página (1er intento de recolor)
+   (los compartidos están en ../shared/estilos-compartidos.css y ../shared/recolor-compartido.css)
+   ========================================================== */
+
+/* ==========================================================
+   Recolor de la portada y del toggle de comunidad (sus estilos base están en estilos-compartidos.css)
+   ========================================================== */
+
+.portada-comunidad__tarjeta {
+  background-color: var(--color-oro);
+  color: var(--color-on-primary);
+}
+.portada-comunidad__resalte-2 {
+  color: var(--color-oro);
+}
+.portada-comunidad__boton {
+  background-color: var(--color-oro);
+  box-shadow: 0 10px 25px rgb(144 134 81 / 0.55);
+}
+.portada-comunidad__boton:hover {
+  background-color: var(--color-oro-oscuro);
+}
+.portada-comunidad__boton-2:hover {
+  background-color: var(--color-gris-claro);
+}
+.portada-comunidad__icono-3 {
+  color: var(--color-oro); /* ícono de "Mascotas Extraviadas": el rosa es solo para textos separadores */
+}
+.extraviados__resalte-2 .extraviados__icono {
+  color: var(--color-oro); /* ícono de ubicación en "Zona: …" de las fichas */
+}
+.portada-comunidad__tarjeta-2 {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.portada-comunidad__capa {
+  background-color: var(--color-oro);
+}
+.portada-comunidad__etiqueta {
+  background-color: var(--color-on-primary);
+}
+.portada-comunidad__insignia-icono {
+  background-color: var(--color-oro);
+  color: var(--color-on-primary);
+}
+
+/* Toggle: { Cartelera de Eventos | Mascotas Buscadas | Difusión } */
+.navegacion-comunidad__pestana-activa {
+  background-color: var(--color-oro);
+}
+.navegacion-comunidad__pestana:hover {
+  background-color: var(--color-gris-claro);
+  color: var(--color-negro);
+}
+
+/* ==========================================================
+   Sección: portada-comunidad
+   ========================================================== */
+
+.portada-comunidad-comunidad-difusion {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface-clean);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .portada-comunidad-comunidad-difusion {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ==========================================================
+   Sección: historias
+   ========================================================== */
+
+.historias {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  max-width: 80rem;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 1024px) {
+  .historias {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.historias__contenedor {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 48rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.historias__resalte {
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.historias__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--color-on-surface);
+}
+
+.historias__texto-2 {
+  font-family: var(--fuente-texto);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.historias__cuadricula {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .historias__cuadricula {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.historias__tarjeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-surface-clean);
+  padding: 1.5rem;
+  box-shadow: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  border: 1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
+}
+.historias__tarjeta:hover {
+  transform: translateY(-0.25rem);
+}
+
+.historias__columna {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.historias__bloque {
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.historias__imagen {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.historias__subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.375;
+  color: var(--color-on-surface);
+}
+
+.historias__texto {
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-on-surface-variant);
+}
+
+.historias__bloque-2 {
+  padding-top: 0.5rem;
+}
+
+.historias__boton {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-gris-tarjeta);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-titulo-tarjeta);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.historias__boton:hover {
+  background-color: var(--color-oro);
+  color: var(--color-on-primary);
+}
+
+.historias__icono {
+  font-size: 20px;
+  color: inherit;
+}
+
+/* ==========================================================
+   Paneles del toggle: el que no está seleccionado se oculta
+   ========================================================== */
+
+.cartelera[hidden],
+.extraviados[hidden],
+.historias[hidden] {
+  display: none;
+}
+
+/* ==========================================================
+   Sección: cartelera (panel "Cartelera de Eventos")
+   ========================================================== */
+
+.cartelera {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  max-width: 80rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .cartelera {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.cartelera__columna-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .cartelera__columna-2 {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.cartelera__texto-2 {
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.cartelera__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-on-surface);
+}
+
+.cartelera__texto-3 {
+  max-width: 28rem;
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.cartelera__tarjeta-2 {
+  position: relative;
+  display: flex;
+  min-height: 440px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0;
+  color: var(--color-texto-tarjeta);
+  box-shadow: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background-color: var(--color-gris-tarjeta);
+}
+
+/* Carruseles dentro de las pestañas: sin franja de fondo y la tarjeta ocupa toda la diapositiva */
+
+.cartelera .carrusel-eventos,
+.extraviados .carrusel-eventos {
+  background-color: transparent;
+}
+
+.carrusel-eventos__diapositiva {
+  padding: 0;
+  align-items: stretch;
+}
+
+.cartelera__capa {
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .cartelera__capa {
+    width: 50%;
+  }
+}
+
+.cartelera__imagen {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
+}
+
+/* En celular y tablet la imagen queda detrás del texto: se atenúa para que se lea bien */
+
+@media (max-width: 1023px) {
+  .cartelera__imagen {
+    opacity: 0.18;
+  }
+}
+@media (min-width: 1024px) {
+  .cartelera__imagen {
+    object-position: right;
+    opacity: 1;
+  }
+}
+
+.cartelera__columna {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .cartelera__columna {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .cartelera__columna {
+    max-width: 55%;
+    padding: 3rem;
+  }
+}
+
+.cartelera__tarjeta-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  background-color: var(--color-insignia-evento);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-family: var(--fuente-titulos);
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: var(--color-texto-tarjeta);
+  box-shadow: none;
+}
+
+.cartelera__subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-titulo-tarjeta);
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+}
+
+.cartelera__texto-4 {
+  max-width: 36rem;
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.625;
+  color: var(--color-texto-tarjeta);
+}
+
+.cartelera__insignia-icono {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-surface-clean);
+  color: var(--color-icono-mosaico);
+  box-shadow: none;
+}
+
+.cartelera__resalte {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.cartelera__texto {
+  font-family: var(--fuente-titulos);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--color-texto-tarjeta);
+}
+
+.cartelera__fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+  padding-top: 0.25rem;
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-texto-tarjeta);
+}
+
+.cartelera__tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: var(--color-gris-mosaico);
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.cartelera__icono-3 {
+  font-size: 18px;
+}
+
+.cartelera__tarjeta-5 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: var(--color-gris-mosaico);
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-texto-tarjeta);
+}
+
+.cartelera__icono-4 {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.cartelera__bloque {
+  padding-top: 0.5rem;
+}
+
+.cartelera__boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-surface-clean);
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  color: var(--color-titulo-tarjeta);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.cartelera__boton:hover {
+  transform: translateY(-0.125rem);
+  background-color: var(--color-surface-clean);
+  color: var(--color-oro);
+}
+
+.cartelera__icono {
+  font-size: 20px;
+}
+
+.cartelera__negrita {
+  font-weight: 700;
+  color: var(--color-titulo-tarjeta);
+}
+
+.cartelera__fila-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cartelera__tarjeta-12 {
+  display: flex;
+  min-width: 190px;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-color: transparent;
+  background-color: var(--color-gris-mosaico);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  box-shadow: none;
+}
+
+.cartelera__bloque-5 {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--color-titulo-tarjeta);
+}
+
+/* ==========================================================
+   Sección: extraviados (panel "Mascotas Buscadas")
+   ========================================================== */
+
+.extraviados {
+  width: 100%;
+  background-color: var(--color-surface-clean);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.extraviados__contenedor {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 80rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .extraviados__contenedor {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.extraviados__columna-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .extraviados__columna-2 {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.extraviados__tarjeta-2 {
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-oro);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-family: var(--fuente-titulos);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--color-on-primary);
+}
+
+.extraviados__icono {
+  font-size: 16px;
+}
+
+.extraviados__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-on-surface);
+}
+
+.extraviados__texto-2 {
+  margin-top: 0.25rem;
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.extraviados__boton-2 {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-oro);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  color: var(--color-on-error);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.extraviados__boton-2:hover {
+  background-color: var(--color-oro-oscuro);
+}
+
+.extraviados__icono-2 {
+  font-size: 20px;
+}
+
+.extraviados__fila-2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.extraviados__tarjeta-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  background-color: var(--color-surface-clean);
+  padding: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.extraviados__boton-3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-oro);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  color: var(--color-on-primary);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.extraviados__icono-3 {
+  font-size: 18px;
+}
+
+.extraviados__boton-4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.extraviados__boton-4:hover {
+  color: var(--color-titulo-tarjeta);
+}
+
+.extraviados__grafico {
+  height: 1rem;
+  width: 1rem;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.extraviados__cuadricula {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Historial: cada página del carrusel es una cuadrícula de 12 fichas */
+
+.carrusel-mascotas .carrusel-eventos__ventana {
+  border-radius: 0;
+}
+
+.carrusel-mascotas .carrusel-eventos__diapositiva {
+  display: block;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .carrusel-mascotas .carrusel-eventos__flecha {
+    top: 9rem; /* a la altura de la primera fila de fichas */
+    transform: none;
+  }
+}
+@media (min-width: 640px) {
+  .extraviados__cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .extraviados__cuadricula {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.extraviados__tarjeta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-surface-clean);
+  padding: 1rem;
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
+}
+
+.extraviados__bloque {
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.extraviados__imagen {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.extraviados__etiqueta {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-family: var(--fuente-titulos);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--color-on-primary);
+}
+
+.extraviados__columna {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.extraviados__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.extraviados__subtitulo {
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.extraviados__resalte {
+  font-family: var(--fuente-titulos);
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.extraviados__texto {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-on-surface-variant);
+}
+
+.extraviados__columna-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--color-on-surface-variant);
+}
+
+.extraviados__resalte-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.extraviados__resalte-3 {
+  margin-top: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.extraviados__boton {
+  margin-top: auto;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--color-gris-tarjeta);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-titulo-tarjeta);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.extraviados__boton:hover {
+  background-color: var(--color-oro);
+  color: var(--color-on-primary);
+}
+
+.extraviados__icono-4 {
+  font-size: 18px;
+  color: inherit;
+}
+
+/* ==========================================================
+   Sección: alianzas (mismo formato que "¿No cuentas con espacio…?" de adopciones)
+   ========================================================== */
+
+.alianzas {
+  width: 100%;
+  background-color: var(--color-surface-clean);
+  padding-top: 3rem; /* mismo espacio que había entre el título y los filtros */
+  padding-bottom: 4rem;
+}
+
+.alianzas__contenedor {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .alianzas__contenedor {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.alianzas__tarjeta {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-gris-tarjeta);
+  padding: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .alianzas__tarjeta {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.alianzas__fila {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alianzas__insignia-icono {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-blanco-calido);
+  color: var(--color-texto-tenue);
+}
+
+.alianzas__icono {
+  font-size: 24px;
+}
+
+.alianzas__titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--color-titulo-tarjeta);
+}
+
+.alianzas__texto {
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-texto-tarjeta);
+}
+
+.alianzas__boton {
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: var(--color-blanco-calido);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  color: var(--color-texto-tenue);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.alianzas__boton:hover {
+  color: var(--color-titulo-tarjeta);
+}
