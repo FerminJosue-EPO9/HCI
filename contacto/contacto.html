@@ -34,7 +34,7 @@
           class="encabezado__enlace-2"
           data-path="inicio" href="../index.html">Patitas Suaves <span class="encabezado__resalte">Xalapa</span></a>
       </div>
-      <nav class="encabezado__navegacion"><a
+      <nav class="encabezado__navegacion" id="menu-principal" aria-label="Menú principal"><a
           class="encabezado__enlace"
           data-path="inicio" href="../index.html">Inicio</a><a
           class="encabezado__enlace"
@@ -46,12 +46,11 @@
           class="encabezado__enlace"
           data-path="comunidad" href="../comunidad/comunidad.html">Comunidad</a><a
           class="encabezado__boton-contacto"
-          data-path="contacto" href="../contacto/contacto.html">Contacto</a></nav>
+          data-path="contacto" href="../contacto/contacto.html">Contacto</a><button class="encabezado__opcion-ingresar" data-path="ingresar" type="button">Ingresar</button></nav>
       <div class="encabezado__fila-2"><a
           class="encabezado__boton"
           data-path="donar-ahora" href="../como-ayudar/como-ayudar.html#donaciones-economicas">Donar Ahora / Apoyar</a>
-        <div class="encabezado__insignia-icono"><span
-            class="material-symbols-outlined encabezado__icono">person</span></div>
+        <button class="encabezado__boton-ingresar" data-path="ingresar" type="button">Ingresar</button><button class="encabezado__menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal"><span class="material-symbols-outlined encabezado__menu-icono" aria-hidden="true">menu</span></button>
       </div>
     </div>
   </header>
@@ -478,6 +477,7 @@
         </a>
     </div>
   </div>
+<script src="../shared/menu-movil.js"></script>
 </body>
 
 </html>

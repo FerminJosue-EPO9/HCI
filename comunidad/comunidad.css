@@ -1053,3 +1053,46 @@
 .alianzas__boton:hover {
   color: var(--color-titulo-tarjeta);
 }
+
+/* ==========================================================
+   Adaptación a celulares y tabletas
+   ========================================================== */
+
+/* ---------- Carteles de la cartelera (carrusel) por debajo de 1024px ----------
+   El cartel deja de ser fondo casi transparente: se muestra completo arriba
+   y el texto queda debajo. */
+
+@media (max-width: 1023px) {
+  .cartelera__tarjeta-2 {
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cartelera__capa {
+    position: relative;
+    height: auto;
+    border-radius: 1rem;
+  }
+  .cartelera__imagen {
+    display: block;
+    height: auto;
+    opacity: 1;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+/* En tableta el cartel no ocupa todo el ancho (sería demasiado alto) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cartelera__capa {
+    max-width: 26rem;
+    margin: 2.5rem auto 0;
+  }
+}
+@media (max-width: 767px) {
+  .carrusel-eventos__diapositiva {
+    padding: 1.25rem;
+  }
+  .cartelera__columna {
+    padding: 1.5rem 0 0;
+  }
+}

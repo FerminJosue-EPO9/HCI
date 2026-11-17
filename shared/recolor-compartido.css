@@ -273,3 +273,247 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* ==========================================================
+   Adaptación a celulares y tabletas (componentes compartidos)
+   ========================================================== */
+
+/* ---------- Encabezado: "Ingresar" (inicio de sesión, aún sin función) ----------
+   En escritorio: botón con el mismo estilo que "Donar Ahora / Apoyar".
+   Por debajo de 1280px: una opción más del menú desplegable, igual que las demás. */
+
+.encabezado__boton-ingresar {
+  display: none;
+  transform: translate(0, 0);
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--color-oro);
+  padding: 0.625rem 1.5rem;
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 12px rgb(144 134 81 / 0.25);
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+.encabezado__boton-ingresar:hover {
+  transform: translateY(-0.125rem);
+  background-color: var(--color-oro-oscuro);
+  box-shadow: 0 6px 16px rgb(144 134 81 / 0.35);
+}
+.encabezado__boton-ingresar:active {
+  transform: translateY(0px);
+}
+.encabezado__boton-ingresar:focus-visible,
+.encabezado__opcion-ingresar:focus-visible {
+  outline: 2px solid var(--color-oro);
+  outline-offset: 2px;
+}
+
+.encabezado__opcion-ingresar {
+  border-radius: 0.5rem;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: var(--fuente-titulos);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--color-negro);
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.encabezado__opcion-ingresar:hover {
+  background-color: var(--color-gris-claro);
+  color: var(--color-oro);
+}
+
+@media (min-width: 1280px) {
+  .encabezado__boton-ingresar {
+    display: inline-flex;
+  }
+  .encabezado__opcion-ingresar {
+    display: none;
+  }
+  .encabezado__fila-2 {
+    gap: 0.75rem;
+  }
+}
+
+/* ---------- Encabezado: botón de menú (visible por debajo de 1280px) ---------- */
+
+.encabezado__menu-boton {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-gris-tarjeta);
+  background-color: var(--color-surface-clean);
+  color: var(--color-oro);
+  cursor: pointer;
+  transition-property: background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.encabezado__menu-boton:hover {
+  background-color: var(--color-gris-claro);
+}
+.encabezado__menu-boton:focus-visible {
+  outline: 2px solid var(--color-oro);
+  outline-offset: 2px;
+}
+.encabezado__menu-icono {
+  font-size: 26px;
+}
+@media (min-width: 1280px) {
+  .encabezado__menu-boton {
+    display: none;
+  }
+}
+
+/* ---------- Encabezado: menú desplegable (por debajo de 1280px) ---------- */
+
+@media (max-width: 1279px) {
+  .encabezado__navegacion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    border-top: 1px solid var(--color-gris-tarjeta);
+    background-color: var(--color-surface-clean);
+    padding: 0.75rem 1.5rem 1.25rem;
+    box-shadow: 0 12px 24px rgb(0 0 0 / 0.08);
+  }
+  .encabezado__navegacion.active {
+    display: flex;
+  }
+  .encabezado__navegacion > a {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .encabezado__navegacion > .encabezado__enlace {
+    color: var(--color-negro);
+  }
+  .encabezado__navegacion > .encabezado__enlace:hover {
+    background-color: var(--color-gris-claro);
+    color: var(--color-oro);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .encabezado__navegacion {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ---------- Encabezado en celular: solo logo, nombre y botón de menú ----------
+   "Donar Ahora / Apoyar" sigue disponible en la barra flotante ("Donar"). */
+
+@media (max-width: 639px) {
+  .encabezado__contenedor {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .encabezado__boton {
+    display: none;
+  }
+  .encabezado__fila {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .encabezado__enlace-2,
+  .encabezado__resalte-2 {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 379px) {
+  .encabezado__enlace-2,
+  .encabezado__resalte-2 {
+    font-size: 17px;
+  }
+}
+
+/* ---------- Barra flotante en celular: una sola fila (ícono + 2 botones) ----------
+   El texto "¿Tienes dudas…?" se oculta para que la barra no tape el contenido. */
+
+@media (max-width: 639px) {
+  .barra-contacto {
+    flex-direction: row;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+  }
+  .barra-contacto__bloque {
+    display: none;
+  }
+  .barra-contacto__acciones {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  .barra-contacto__boton-whatsapp,
+  .barra-contacto__boton-donar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+}
+
+/* ---------- Pie de página en celular: contenido repartido a lo ancho ----------
+   Marca y "Comunidad Digital" a todo el ancho; "Enlaces Rápidos" y
+   "Contacto y Visitas" lado a lado. Espacio extra abajo para la barra flotante. */
+
+@media (max-width: 767px) {
+  .pie__contenedor {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+  }
+  .pie__cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1.25rem;
+  }
+  .pie__cuadricula > :first-child,
+  .pie__cuadricula > :last-child {
+    grid-column: 1 / -1;
+  }
+  .pie__columna-4 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 0.5rem;
+  }
+  .pie__columna-4 > span {
+    overflow-wrap: anywhere;
+  }
+  .pie__columna-5 {
+    margin-top: 0;
+    padding-top: 0.5rem;
+  }
+  .pie__columna-6 {
+    margin-top: 2rem;
+    padding-top: 0;
+    text-align: center;
+  }
+  .pie__fila-3 {
+    justify-content: center;
+  }
+}

@@ -1795,3 +1795,130 @@
   display: none;
 }
 
+
+/* ==========================================================
+   Adaptación a celulares y tabletas
+   ========================================================== */
+
+/* ---------- Donaciones económicas: menos tarjetas anidadas en celular ----------
+   La tarjeta blanca contenedora pierde su relleno y sombra para que las
+   tarjetas grises usen todo el ancho de la pantalla. */
+
+@media (max-width: 639px) {
+  .donaciones-economicas__tarjeta-2 {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .donaciones-economicas__tarjeta-3,
+  .donaciones-economicas__tarjeta-5,
+  .donaciones-economicas__tarjeta-7 {
+    padding: 1.25rem;
+  }
+  .donaciones-economicas__tarjeta-3,
+  .donaciones-economicas__tarjeta-4 {
+    margin-bottom: 1.25rem;
+  }
+  .donaciones-economicas__cuadricula-2 {
+    gap: 1.25rem;
+  }
+  .donaciones-economicas__tarjeta-9 {
+    margin-top: 1.25rem;
+  }
+}
+/* En tableta, "Datos bancarios" y "Confirmación" en 2 columnas quedan muy
+   angostas (la CLABE se partía en 3 líneas): se apilan hasta 1024px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .donaciones-economicas__cuadricula-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/* CLABE completa en una línea; el botón "Copiar" baja si no cabe */
+@media (max-width: 1279px) {
+  .donaciones-economicas__tarjeta-6 {
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+  .donaciones-economicas__resalte-9 {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 639px) {
+  .donaciones-economicas__resalte-9 {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* ---------- Donaciones en especie: misma idea que arriba ---------- */
+
+@media (max-width: 639px) {
+  .donaciones-especie__tarjeta-2 {
+    gap: 2rem;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .donaciones-especie__tarjeta {
+    padding: 1.25rem;
+  }
+}
+/* En tableta, 3 columnas de insumos quedan muy angostas: se apilan hasta 1024px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .donaciones-especie__cuadricula {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* ---------- Carteles de productos y eventos (carrusel) por debajo de 1024px ----------
+   El cartel deja de ser fondo difuminado detrás del texto: se muestra completo
+   arriba y el texto queda debajo. */
+
+@media (max-width: 1023px) {
+  .volovanes-con-causa__capa {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+  .volovanes-con-causa__imagen {
+    display: block;
+    height: auto;
+    transform: none;
+  }
+  .volovanes-con-causa__capa-2,
+  .volovanes-con-causa__capa-3 {
+    display: none;
+  }
+  .volovanes-con-causa__columna-3 {
+    max-width: none;
+  }
+}
+/* En tableta el cartel no ocupa todo el ancho (sería demasiado alto) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .volovanes-con-causa__capa {
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Entre 1024 y 1279px el cartel ocupa la mitad derecha: el texto se queda
+   en la mitad izquierda para no encimarse con la imagen */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .volovanes-con-causa__columna-3 {
+    max-width: 50%;
+  }
+  .volovanes-con-causa__cuadricula {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+/* En celular, un solo relleno (el de la diapositiva) */
+@media (max-width: 767px) {
+  .carrusel-eventos__diapositiva {
+    padding: 1.25rem;
+  }
+  .volovanes-con-causa__tarjeta-2 {
+    padding: 0;
+  }
+}
